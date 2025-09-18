@@ -1,0 +1,37 @@
+[
+  {
+    "firstname": "John",
+    "middlename": "Michael",
+    "lastname": "Doe",
+    "age": 20,
+    "location": "New York"
+  },
+  {
+    "firstname": "Jane",
+    "middlename": "Elizabeth",
+    "lastname": "Smith",
+    "age": 22,
+    "location": "California"
+  },
+  {
+    "firstname": "Robert",
+    "middlename": null,
+    "lastname": "Johnson",
+    "age": 21,
+    "location": "Texas"
+  },
+  {
+    "firstname": "Emily",
+    "middlename": "Rose",
+    "lastname": "Davis",
+    "age": 19,
+    "location": "Florida"
+  },
+  {
+    "firstname": "Michael",
+    "middlename": "James",
+    "lastname": "Wilson",
+    "age": 23,
+    "location": "Washington"
+  }
+]
