@@ -23,6 +23,12 @@ public class StudentService {
     @Autowired
     private ObjectMapper objectMapper;
     
+    @Autowired
+    private ExcelExportService excelExportService;
+    
+    @Autowired
+    private PdfExportService pdfExportService;
+    
     @Value("${app.json.file.path:students.json}")
     private String jsonFilePath;
     
@@ -116,5 +122,17 @@ public class StudentService {
     public void exportStudentsToJson(String filePath) throws IOException {
         List<Student> students = studentRepository.findAll();
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePath), students);
+    }
+    
+    // Export students to Excel file
+    public byte[] exportStudentsToExcel() throws IOException {
+        List<Student> students = studentRepository.findAll();
+        return excelExportService.exportStudentsToExcel(students);
+    }
+    
+    // Export students to PDF file
+    public byte[] exportStudentsToPdf() throws IOException {
+        List<Student> students = studentRepository.findAll();
+        return pdfExportService.exportStudentsToPdf(students);
     }
 }
